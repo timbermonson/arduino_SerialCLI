@@ -24,7 +24,7 @@ static char *findNextParam(const char *str) {
   return trimPreceding(strchr(str, ' '));
 }
 
-static bool isNumberical(const char *str) {
+static bool isNumerical(const char *str) {
   for (int i = 0; i < (int)strlen(str); i++) {
     if (!isDigit(str[i])) return false;
   }
@@ -75,7 +75,7 @@ bool SerialCLI::validate(const char **paramList, const char validationString[]) 
 
     switch (v) {
       case 'n':
-        if (!isNumberical(param)) {
+        if (!isNumerical(param)) {
           Serial.print(F("Error! Parameter #"));
           Serial.print(i + 1);
           Serial.println(F(" must be numerical"));
@@ -198,7 +198,7 @@ void SerialCLI::handleCommand() {
       }
       Serial.println();
     }
-    
+
     Serial.println(F("- help"));
     return;
   }
