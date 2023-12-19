@@ -75,17 +75,17 @@ bool SerialCLI::validate(const char **paramList, const char validationString[]) 
 
     switch (v) {
       case 'n':
-        if (!isNumberical(param)){
+        if (!isNumberical(param)) {
           Serial.print(F("Error! Parameter #"));
-          Serial.print(i+1);
+          Serial.print(i + 1);
           Serial.println(F(" must be numerical"));
           return false;
         }
         break;
       case 'a':
-        if (!isAlphabetical(param)){
+        if (!isAlphabetical(param)) {
           Serial.print(F("Error! Parameter #"));
-          Serial.print(i+1);
+          Serial.print(i + 1);
           Serial.println(F(" must be a string"));
           return false;
         }
@@ -186,13 +186,19 @@ void SerialCLI::handleCommand() {
 
   if (strcmp(helpCommand, command) == 0) {
     Serial.println(F("LIST OF COMMANDS"));
+
     for (int i = 0; i < numFuncs; i++) {
       Serial.print(F("- "));
       Serial.print(funcMap[i].name);
-      Serial.print(F(" (syntax: \""));
-      Serial.print(funcMap[i].validatorString);
-      Serial.println(F("\")"));
+
+      if (strlen(funcMap[i].validatorString) > 0) {
+        Serial.print(F(" (syntax: \""));
+        Serial.print(funcMap[i].validatorString);
+        Serial.print(F("\")"));
+      }
+      Serial.println();
     }
+    
     Serial.println(F("- help"));
     return;
   }
@@ -201,7 +207,7 @@ void SerialCLI::handleCommand() {
     FuncDescriptor desc = funcMap[i];
 
     if (strcmp(desc.name, command) == 0) {
-      if(!validate(paramList, desc.validatorString)) return;
+      if (!validate(paramList, desc.validatorString)) return;
 
       desc.func(paramList);
       return;
