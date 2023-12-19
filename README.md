@@ -51,7 +51,7 @@ $ help
 LIST OF COMMANDS
 - ping
 - whoami
-- doublethis
+- doublethis (syntax: "n")
 - help
 $ ping
 Pong! Millis since bootup: 7318
