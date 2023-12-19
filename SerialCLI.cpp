@@ -142,7 +142,7 @@ void SerialCLI::getSerialMessage() {
       hasNewMessage = true;
 
       // echo message back, emulating command terminal
-      Serial.print(F("\n$ "));
+      Serial.print(F("$ "));
       Serial.println(serialBuffer);
 
       return;
