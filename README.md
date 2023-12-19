@@ -44,7 +44,7 @@ void loop() {
 ```
 
 Generates a CLI with this example output:
-```md
+```
 $ a
 Unknown Command!
 $ help
