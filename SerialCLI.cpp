@@ -188,7 +188,10 @@ void SerialCLI::handleCommand() {
     Serial.println(F("LIST OF COMMANDS"));
     for (int i = 0; i < numFuncs; i++) {
       Serial.print(F("- "));
-      Serial.println(funcMap[i].name);
+      Serial.print(funcMap[i].name);
+      Serial.print(F(" (syntax: \""));
+      Serial.print(funcMap[i].validatorString);
+      Serial.println(F("\")"));
     }
     Serial.println(F("- help"));
     return;
