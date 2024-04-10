@@ -2,9 +2,9 @@ This library provides an easy framework for triggering callback functions via se
 
 It handles parameterized callbacks, ex. `$doublethis 17` -> `Your input, doubled, equals: 34` (Output made by callback)
 
-_As well as_ parameter validation, ex. `$ doublethis aaaa` -> `Error! Parameter #1 must be numerical` (Output made by library)
+_As well as_ parameter validation, ex. `$doublethis aaaa` -> `Error! Parameter #1 must be numerical` (Output made by library)
 
-The example:
+# Example Code & Output
 ```cpp
 #include "SerialCLI.h"
 
