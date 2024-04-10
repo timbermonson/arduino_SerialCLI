@@ -1,8 +1,8 @@
 This library provides an easy framework for triggering callback functions via serial messages.
 
-It handles parameterized callbacks, ex. `$doublethis 17` -> Callback output: `Your input, doubled, equals: 34`
+It handles parameterized callbacks, ex. `$doublethis 17` -> Callback: `Your input, doubled, equals: 34`
 
-_As well as_ parameter validation, ex. `$doublethis aaaa` -> Lib output: `Error! Parameter #1 must be numerical`
+_As well as_ parameter validation, ex. `$doublethis aaaa` -> Library: `Error! Parameter #1 must be numerical`
 
 # Example Code & Output
 ```cpp
