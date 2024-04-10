@@ -5,6 +5,8 @@ It handles parameterized callbacks, ex. `$doublethis 17` -> Callback: `Your inpu
 _As well as_ parameter validation, ex. `$doublethis aaaa` -> Library: `Error! Parameter #1 must be numerical`
 
 # Example Code & Output
+
+**Code:**
 ```cpp
 #include "SerialCLI.h"
 
@@ -49,7 +51,7 @@ void loop() {
 }
 ```
 
-Generates a CLI with this example output:
+**Output (as an example serial interaction):**
 ```
 $ a
 Unknown Command!
