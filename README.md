@@ -1,4 +1,4 @@
-This library provides an easy framework for triggering callback functions via serial messages, and even handles parameterized callbacks (ex. `$doublethis 44` -> `Your input, doubled, equals: 88`).
+This library provides an easy framework for triggering callback functions via serial messages, and even handles parameterized callbacks (ex. `$doublethis 17` -> `Your input, doubled, equals: 34`).
 
 The lib ALSO provides easy parameter validation-- sending error messages for the wrong number & type of params.
 
