@@ -55,20 +55,26 @@ void loop() {
 ```
 $ a
 Unknown Command!
+
 $ help
 LIST OF COMMANDS
 - ping
 - whoami
 - doublethis (syntax: "n")
 - help
+
 $ ping
 Pong! Millis since bootup: 7318
+
 $ whoami
 I'm an arduino!
+
 $ doublethis
 Error! Command requires: 1 parameter(s), received: 0
+
 $ doublethis aaaa
 Error! Parameter #1 must be numerical
+
 $ doublethis 222
 Your input, doubled, equals: 444
 ```
