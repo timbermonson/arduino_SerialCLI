@@ -51,7 +51,7 @@ void loop() {
 }
 ```
 
-**Output (as an example serial interaction):**
+**Output (demonstrating the CLI created by the above code):**
 ```
 $ a
 Unknown Command!
